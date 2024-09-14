@@ -36,3 +36,15 @@ function updateStock(inventory, unitsSold) {
 } // Updates the quantity in stock and returning the new quantity.
 
 // console.log(updateStock(inventory[0], 15)); // Output should display the new quantity and stock status.
+
+
+// TASK 4: Create a Function to Check Low Stock Products
+
+function checkLowStock(inventory) {
+    for (let i = 0; i < inventory.length; i++) {
+        if (inventory[i].quantity < inventory[i].lowStockLevel) {
+            console.log(inventory[i].name + " stock is low.");
+        };
+    };
+};
+
