@@ -46,5 +46,15 @@ function checkLowStock(inventory) {
             console.log(inventory[i].name + " stock is low.");
         };
     };
+}; // for loop because forEach wasn't working. Checks if quantity is lower than low stock level.
+
+// console.log(checkLowStock(inventory)); // Output: brush stock is low.
+
+
+// TASK 5: Create a Function to Calculate Total Inventory Value
+
+function calculateInventoryValue(inventory) {
+    inventory.reduce((price, quantity) => (price * quantity), 0);
 };
 
+console.log(calculateInventoryValue(inventory));
