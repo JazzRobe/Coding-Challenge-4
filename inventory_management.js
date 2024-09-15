@@ -1,3 +1,5 @@
+// Any console.log  have in the comments can be tested, just delete the slashes.
+
 // TASK 1 - Create an Inventory Array of Product Objects
 
 let inventory = [
@@ -55,6 +57,25 @@ function checkLowStock(inventory) {
 
 function calculateInventoryValue(inventory) {
     inventory.reduce((price, quantity) => (price * quantity), 0);
-};
+}; // Using reduce() to multiply all prices and quantities for total inventory value.
 
-console.log(calculateInventoryValue(inventory));
+// console.log(calculateInventoryValue(inventory));
+
+
+// TASK 6: Create a Function to Process a Sale
+
+function processSale(inventory, unitsSold) {
+    let found = false;
+    for (let i = 0; i < inventory.length; i++) {
+        if (inventory[i].name === inventory.name) {
+            found = true;
+            updateStock(inventory[i], unitsSold);
+            break;
+        }
+    }
+    if (!found) {
+        return "This item does not exist in the inventory.";
+    };
+}; // Function that was supposed to find a product in the array and then update the stock accordingly.
+
+console.log(processSale("food", 2)); // No, it does not work. If I have time I will fix it.
